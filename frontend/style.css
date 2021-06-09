@@ -9,5 +9,14 @@ body{
   height: 100vh;
   margin: 0;
   font-family: 'Asap', sans-serif;
-  background-image: linear-gradient(to bottom, #33cc33 -15%, #000000 90%); 
+  background-image: linear-gradient(
+    to bottom, #66ff66 -15%, #000000 90%); 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
+
+
