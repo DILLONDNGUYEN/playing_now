@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+  height: 100vh;
+  margin: 0;
+  font-family: 'Asap', sans-serif;
+  background-image: linear-gradient(to bottom, #009900 -20%, #ccffcc 62%); 
+}
