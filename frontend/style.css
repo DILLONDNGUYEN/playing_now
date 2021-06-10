@@ -84,7 +84,7 @@ body{
   top: 0;
   left: 50px;
   width: calc(100% - 30 px);
-  padding: 10px 10px 10px 200px;
+  padding: 10px 10px 10px 100px;
   /* opacity: 0; */
   transform: translateY(0%);
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
@@ -93,7 +93,7 @@ body{
 
 .music-container.play .song-info {
   opacity: 1;
-  transform: translateY(-95%);
+  transform: translateY(-100%);
 }
 
 .song-info h3{
