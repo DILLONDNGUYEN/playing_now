@@ -45,8 +45,10 @@ audio.pause()
 function prevSong(){
   songIndex--
   if(songIndex < 0) {
-    
+    songIndex = songs.length - 1
   }
+  loadSong(song[songIndex])
+  playSong()
 
 }
 
