@@ -93,7 +93,7 @@ body{
 
 .music-container.play .song-info {
   opacity: 1;
-  transform: translateY(-105%);
+  transform: translateY(-95%);
 }
 
 .song-info h3{
@@ -106,7 +106,7 @@ body{
   cursor: pointer;
   margin: 15px 0;
   height: 7px;
-  width: 350%;
+  width: 320%;
 }
 
 .progress {
