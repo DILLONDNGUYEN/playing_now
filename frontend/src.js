@@ -16,7 +16,7 @@ const songs = ['Electricity', 'Be Right There', 'All I Want vs. Moments vs. Soun
 
 let songIndex = 0;
 
-// Load song into DOM
+// Load song 
 
 loadSong(songs[songIndex]);
 
@@ -54,7 +54,12 @@ function prevSong(){
 
 function nextSong(){
   songIndex++;
-  if(songIndex)
+
+  if(songIndex > song.length - 1){
+    songIndex = 0;
+  }
+  loadSong(songs[songIndex]);
+  playSong();
 }
 
 
