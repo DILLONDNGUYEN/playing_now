@@ -1,4 +1,6 @@
 const musicContainer = document.querySelector('.music-container')
+const title = document.querySelector('#title')
+const cover = document.querySelector('#cover')
 const playbtn = document.querySelector('#play')
 const prevbtn = document.querySelector('#prev')
 const nextbtn = document.querySelector('#next')
