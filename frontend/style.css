@@ -86,6 +86,10 @@ font-size: 35px;
   transition: transform 0.3s ease-in opacity 0.3s ease-in;
 }
 
+.music-info h4 {
+  margin: 0;
+}
+
 
 
 .music-container.play .music-info{
@@ -93,4 +97,12 @@ font-size: 35px;
   transform: translateY(-100%);
 }
 
+.progress-container{
+  background: rgb(10, 255, 10);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
 
