@@ -35,7 +35,17 @@ body{
 }
 
 .img-container{
-  
+  position: relative;
+  width: 110px;
+}
+
+.img-container img{
+  width: inherit;
+  height: 110px;
+  object-fit: cover;
+  position: absolute;
+  bottom 0;
+  left: 0;
 }
 
 
