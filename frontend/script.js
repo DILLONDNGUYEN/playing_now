@@ -32,12 +32,14 @@ function playSong(){
 musicContainer.classList.add('play')
 playbtn.querySelector('i.fas').classList.remove('fa-play')
 playbtn.querySelector('i.fas').classList.add('fa-play')
+audio.play()
 }
 
 function pauseSong(){
 musicContainer.classList.remove('play')
 playbtn.querySelector('i.fas').classList.add('fa-play')
 playbtn.querySelector('i.fas').classList.remove('fa-play')
+audio.pause()
 }
 
 
