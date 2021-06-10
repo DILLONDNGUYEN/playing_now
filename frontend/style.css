@@ -58,7 +58,7 @@ body{
 .action-btn {
   background-color: rgb(10, 255, 10);
   border: 0;
-  color: rgb(83, 173, 83);
+  color: rgb(43, 109, 43);
   font-size: 25px;
   cursor: pointer;
   padding: 10px;
@@ -66,7 +66,7 @@ body{
 }
 
 .action-btn-big{
-color: rgb(50, 160, 50);
+color: rgb(21, 65, 21);
 font-size: 35px;
 }
 

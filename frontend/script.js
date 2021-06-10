@@ -28,6 +28,18 @@ function loadSong(song) {
   cover.src = `images/${song}.jpg`
 }
 
+function playSong(){
+musicContainer.classList.add('play')
+playbtn.querySelector('i.fas').classList.remove('fa-play')
+playbtn.querySelector('i.fas').classList.add('fa-play')
+}
+
+function pauseSong(){
+
+}
+
+
+
 //Event Listens
 
 playbtn.addEventListener('click', () => {
