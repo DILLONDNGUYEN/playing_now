@@ -30,23 +30,38 @@ function loadSong(song) {
 
 function playSong(){
 musicContainer.classList.add('play')
-playbtn.querySelector('i.fas').classList.remove('fa-play')
-playbtn.querySelector('i.fas').classList.add('fa-play')
+playBtn.querySelector('i.fas').classList.remove('fa-play')
+playBtn.querySelector('i.fas').classList.add('fa-play')
 audio.play()
 }
 
 function pauseSong(){
 musicContainer.classList.remove('play')
-playbtn.querySelector('i.fas').classList.add('fa-play')
-playbtn.querySelector('i.fas').classList.remove('fa-play')
+playBtn.querySelector('i.fas').classList.add('fa-play')
+playBtn.querySelector('i.fas').classList.remove('fa-play')
 audio.pause()
 }
+
+function prevSong(){
+  songIndex--
+  if(songIndex < 0) {
+    
+  }
+
+}
+
+function nextSong(){
+
+}
+
+
+
 
 
 
 //Event Listens
 
-playbtn.addEventListener('click', () => {
+playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play')
 
   if(isPlaying) {
@@ -55,3 +70,8 @@ playbtn.addEventListener('click', () => {
     playSong()
   }
 })
+
+//Change Event
+
+prevBtn.addEventListener('click', prevSong)
+nextBtn.addEventListener('click', nextSong)
