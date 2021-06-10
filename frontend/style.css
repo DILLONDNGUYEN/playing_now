@@ -30,7 +30,7 @@ body{
   display: flex;
   padding: 20px 30px;
   position: relative;
-  margin: 150px;
+  margin: 250px;
   z-index: auto;
 }
 
@@ -76,7 +76,7 @@ body{
 }
 
 
-.music-info {
+.song-info {
   background-color: rgb(10, 255, 10);
   border-radius: 20px 20px 0 0;
   position: absolute;
@@ -90,12 +90,12 @@ body{
   z-index: 0;
 }
 
-.music-container.play .music-info {
+.music-container.play .song-info {
   opacity: 1;
   transform: translateY(-125%);
 }
 
-.music-info h4{
+.song-info h4{
   margin: 0;
 }
 
