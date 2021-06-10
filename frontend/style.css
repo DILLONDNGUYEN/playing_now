@@ -58,8 +58,9 @@ body{
 .action-btn {
   background-color: rgb(10, 255, 10);
   border: 0;
-  color: rgb(125, 255, 125);
+  color: rgb(83, 173, 83);
   font-size: 25px;
+  cursor: pointer;
   padding: 10px;
   margin: 0 20px;
 }
@@ -83,18 +84,17 @@ font-size: 35px;
   padding: 10px 10px 10px 150px;
   opacity: 0;
   transform: translateY(0%);
-  transition: transform 0.3s ease-in opacity 0.3s ease-in;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
 }
-
-.music-info h4 {
-  margin: 0;
-}
-
-
 
 .music-container.play .music-info{
   opacity: 1;
   transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
 }
 
 .progress-container{
@@ -104,5 +104,13 @@ font-size: 35px;
   margin: 10px 0;
   height: 4px;
   width: 100%;
+}
+
+.progress {
+  background-color: maroon;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
 }
 
