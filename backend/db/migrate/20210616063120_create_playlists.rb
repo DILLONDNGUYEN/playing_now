@@ -3,7 +3,7 @@ class CreatePlaylists < ActiveRecord::Migration[6.0]
     create_table :playlists do |t|
       t.string :name
       t.string :description
-      t.belongs_to :user, null: false, foreign_key: true
+      t.references :owner, foreign_key: {to_table: :users, on_delete: :cascade}
 
       t.timestamps
     end
