@@ -22,6 +22,14 @@ body{
 
 }
 
+/* Playlist Part */
+
+.playlist-container{
+  background-color:rgb(78, 255, 78) ;
+  border: black;
+}
+
+/* Music Part */
 .music-container{
   background-color: rgb(78, 255, 78);
   border-radius: 25px;
@@ -77,7 +85,7 @@ body{
 }
 
 
-.song-info {
+.music-info {
   background-color: rgb(78, 255, 78);
   border-radius: 20px 20px 0 0;
   position: absolute;
@@ -91,12 +99,12 @@ body{
   z-index: 0;
 }
 
-.music-container.play .song-info {
+.music-container.play .music-info {
   opacity: 1;
   transform: translateY(-100%);
 }
 
-.song-info h3{
+.music-info h3{
   margin: 10;
 }
 
