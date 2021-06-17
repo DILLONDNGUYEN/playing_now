@@ -7,10 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create(username: 'dillon')
 
-song = Song.create(name: 'Happy Birthday', artist: 'family', genre: 'pop')
+# song = Song.create(name: 'Happy Birthday', artist: 'family', genre: 'pop')
 
 playlist = Playlist.create(name: 'Birthday party', owner: user)
 
 user.playlists << playlist
 
-PlaylistSong.create(playlist: playlist, song: song)
+# playlist.songs << song
+
