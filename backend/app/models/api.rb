@@ -9,7 +9,7 @@ class Api
         @url=url
     end
 
-    def get_info #does not need to be touched
+    def get_info 
         uri=URI(url)    
         new_req = Net::HTTP::Get.new(uri)
         new_req['Authorization'] = "Bearer #{token}" 
@@ -19,7 +19,7 @@ class Api
         return JSON(response.body)
     end
 
-    def make_songs #in your case it will be called make_songs and changed slightly
+    def make_songs 
       get_info["tracks"].each do |t|
                
         title=t["name"]
@@ -68,3 +68,5 @@ api.make_songs
 # 7GJZub0IUYXMQlNQyRUteg
 # 664AkZ4BMCDfER8P7LEkfh
 # 0yXD8BJamvaQvu7Ut3nHMB
+# 0ZvXgpmQhnGOLEgM6wxDOA
+# 3UN5yPcQWVqYukYBl2PNmr
