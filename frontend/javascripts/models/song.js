@@ -8,4 +8,5 @@ class Song{
     this.duration = duration
     Song.all.push(this)
   }
+  
 }
