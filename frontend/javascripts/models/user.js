@@ -1,8 +1,10 @@
 class User{
   static all = []
-  constructor({name, id}){
-    this.name = name
-    this.id = id
+  constructor({username}){
+    this.username = username
     User.all.push(this)
+  }
+  static findOrCreateUser(username){
+    this.findByName(username.name)|| new User(username)
   }
 }
