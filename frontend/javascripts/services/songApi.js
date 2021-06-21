@@ -3,9 +3,10 @@ class SongApi {
     fetch("http://localhost:3000/songs")
     .then(resp=>resp.json())
     .then(json=>{
-      json.data.forEach(song => {
-                Song.findOrCreateSong(song.attributes)
-               song.attributes.title.forEach(title=> new Title(title))
+      // debugger
+      json.forEach(song => {
+                Song.findOrCreateSong(song)
+               
             });
      //iterate through json array 
      

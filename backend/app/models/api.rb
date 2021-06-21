@@ -5,7 +5,7 @@ require 'json'
 class Api 
     attr_reader :url, :token
     def initialize(url) #replace only the token with yours
-        @token = "BQCZ027F25cPwj8bwUi38kGOEPpG_wsEEQZ_SMkGCG1Zux7OlJmXiSK48WhAW1brq5dAfl7-iTINcj4GqnhIfup36nr65N3jPUi3rHvoAvKCRlzG9o-Nnsg9pcbInMCPbmI5omRS7UkV"     
+        @token = "BQDw1Ck6FO27g4caR6nG-HE-ZS2jmOATOdcb9TaxKrsqY0dzOtvAF7EwiOSHjjfcc4Y_y7uNUcCNkCKgREVcElW0UfGe3ROXdDIfFu-n7Nr31figqJzjF3YKOjPbjGIjqrdP6vFM6slC"     
         @url=url
     end
 
