@@ -18,8 +18,11 @@ class Song{
   }
   static findAllByTitle(title){
         const formattedTitle= title.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1) ).join(" ")
-        return this.all.filter(song=> song.title.startsWith(formattedTitle))
-            
-    }
+        return this.all.filter(song => song.title.startsWith(formattedTitle))          
+  }
+  static searchSong(){
+    let searchSong = e.target.value
+    const songs = Song.findAllByTitle(searchSong)
+  }
 }
 
