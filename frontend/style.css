@@ -126,6 +126,10 @@ body{
 }
 
 .search-container{
-  
+  border-radius: 10px;
+  border: rgb(black);
+  display: flex;
 }
-
+.searchWrapper{
+  border-radius: 20px;
+}
