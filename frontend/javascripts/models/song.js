@@ -20,10 +20,22 @@ class Song{
         const formattedTitle= title.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1) ).join(" ")
         return this.all.filter(song => song.title.startsWith(formattedTitle))          
   }
-  static searchSongs(){
-    const songs = Song.findAllByTitle(searchText)
-     document.querySelector("#searchWrapper > input[type=text]").addEventListener("keyup", Song.searchSongs)
+  static searchSongs(e){
+    e.preventDefault()
+    document.getElementById("search-songs").innerHTML= ""
+    const songs = Song.findAllByTitle(e.target.value)
+    songs.forEach(song => song.render())
   }
+  render(){
+    document.getElementById("search-songs").innerHTML+=`
+    <div id="song-${this.id}">
+
+      <h3 class= "song-title"> <a href="#"> ${this.title}</a> </h3>
+
+    </div>
+    `
+  
+  } 
 
 }
 
