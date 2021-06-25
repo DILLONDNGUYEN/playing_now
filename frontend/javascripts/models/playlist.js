@@ -10,4 +10,5 @@ class Playlist{
   findSongsInPlaylist(){
     return Song.all.filter(song => song.playlistIds.includes(this.id))
   }
+  
 }

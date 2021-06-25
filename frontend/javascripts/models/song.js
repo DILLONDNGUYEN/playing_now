@@ -20,9 +20,11 @@ class Song{
         const formattedTitle= title.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1) ).join(" ")
         return this.all.filter(song => song.title.startsWith(formattedTitle))          
   }
-  static searchSong(){
-    let searchSong = e.target.value
-    const songs = Song.findAllByTitle(searchSong)
+  static searchSongs(){
+    let searchText = e.target.value
+    const songs = Song.findAllByTitle(searchText)
+     document.querySelector("#searchWrapper > input[type=text]").addEventListener("keyup", Song.searchSongs)
   }
+  
 }
 
