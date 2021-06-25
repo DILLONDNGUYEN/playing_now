@@ -5,4 +5,6 @@ const song = document.getElementById('song')
 
 document.addEventListener("DOMContentLoaded", () =>{
   SongApi.fetchSongs()
+  UserApi.fetchUsers()
+  PlaylistApi.fetchPlaylists()
 })

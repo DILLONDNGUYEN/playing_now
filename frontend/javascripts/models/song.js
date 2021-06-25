@@ -21,10 +21,9 @@ class Song{
         return this.all.filter(song => song.title.startsWith(formattedTitle))          
   }
   static searchSongs(){
-    let searchText = e.target.value
     const songs = Song.findAllByTitle(searchText)
      document.querySelector("#searchWrapper > input[type=text]").addEventListener("keyup", Song.searchSongs)
   }
-  
+
 }
 

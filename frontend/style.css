@@ -129,7 +129,18 @@ body{
   border-radius: 10px;
   border: rgb(black);
   display: flex;
+  align-items: center;
 }
 .searchWrapper{
   border-radius: 20px;
+  border: 20px;
+}
+
+.username-container{
+  border-radius: 20px;
+  position: static;
+}
+
+.playlist-container{
+  padding-left: 50px;
 }
