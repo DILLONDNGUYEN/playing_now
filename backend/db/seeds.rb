@@ -9,7 +9,7 @@ user = User.create(username: 'dillon')
 
 # song = Song.create(name: 'Happy Birthday', artist: 'family', genre: 'pop')
 
-playlist = Playlist.create(name: 'Birthday party', owner: user)
+playlist = Playlist.create(name: 'Party', owner: user)
 
 user.playlists << playlist
 
