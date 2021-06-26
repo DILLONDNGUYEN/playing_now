@@ -5,10 +5,12 @@ class User{
     this.id =id
     User.all.push(this)
   }
-  static findOrCreateUser(user){
-    this.findByName(user.name)|| new User(user)
+  static findOrCreateUser(newUserInput){
+    console.log(newUserInput.value)
+    // this.findByName(user.name)|| new User(user)
   }
-  static findByName(name){
-    return this.all.find(user=> user.name === name)
+  static findByName(username){
+    return this.all.find(user=> user.name === username)
   }
+
 }

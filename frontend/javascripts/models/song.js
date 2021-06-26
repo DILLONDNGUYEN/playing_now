@@ -22,6 +22,7 @@ class Song{
   }
   static searchSongs(e){
     e.preventDefault()
+    if (e.target.value === "") return    
     document.getElementById("search-songs").innerHTML= ""
     const songs = Song.findAllByTitle(e.target.value)
     songs.forEach(song => song.render())
@@ -31,10 +32,12 @@ class Song{
     <div id="song-${this.id}">
 
       <h3 class= "song-title"> <a href="#"> ${this.title}</a> </h3>
-
+      <button id="plus" >
+        <i class="fas fa-plus"></i>
+      </button>
+      
     </div>
-    `
-  
+    `  
   } 
 
 }

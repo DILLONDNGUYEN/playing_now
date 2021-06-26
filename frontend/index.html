@@ -29,18 +29,21 @@
 
 <div class="username-container">
     <div id="username">
-      <input type="text" name="name" placeholder="Create a Username">
-      <input type="submit" id="submit-user" value="submit">
+      <form id="create-user">
+          <label>Create a Username: <input id="new-user" type="text"></label>
+          <br><br>
+          <button type="submit">Submit</button>
+      </form>
     </div>  
 </div>
 
 <!-- SEARCH AREA-->
 <div class="search-container">
-    <div id="searchWrapper">
+    <div id="search-wrapper">
       <h3> Search Songs:</h3>
       <input type="text" name="searchBar" onkeyup="Song.searchSongs"/>        
     </div>
-    
+
     <div id="search-songs">
 
     </div>

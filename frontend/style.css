@@ -135,6 +135,10 @@ body{
   border-radius: 20px;
   border: 20px;
 }
+.song-title{
+  border: 1px solid red;
+  justify-content: flex-end;
+}
 
 .username-container{
   border-radius: 20px;
@@ -143,4 +147,9 @@ body{
 
 .playlist-container{
   padding-left: 35px;
+}
+
+.song-title.plus{
+  border: 1px solid red;
+  align-self: flex-end;
 }
