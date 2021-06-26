@@ -140,6 +140,11 @@ body{
   justify-content: flex-end;
 }
 
+.song-title.plus{
+  border: 1px solid red;
+  align-self: flex-end;
+}
+
 .username-container{
   border-radius: 20px;
   position: static;
@@ -149,7 +154,3 @@ body{
   padding-left: 35px;
 }
 
-.song-title.plus{
-  border: 1px solid red;
-  align-self: flex-end;
-}
