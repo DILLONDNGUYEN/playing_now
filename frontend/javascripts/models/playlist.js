@@ -1,5 +1,5 @@
 class Playlist{
-  static all = []
+  static all = []  
   constructor({name, description, owner_id, id}){
     this.name = name
     this.description = description
@@ -9,6 +9,14 @@ class Playlist{
   }
   findSongsInPlaylist(){
     return Song.all.filter(song => song.playlistIds.includes(this.id))
+  }
+  static findOrCreatePlaylist(){
+    this.findByOwnerId(playlist.id) || new Playlist(playlist)
+  }
+  static findByOwnerId(id){
+    return this.all.find(function(id){
+      playlist.id=== id   
+    })
   }
   
 
