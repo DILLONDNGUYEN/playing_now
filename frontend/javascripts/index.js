@@ -7,7 +7,7 @@ const newUserInput = document.getElementById('new-user')
 
 
 document.addEventListener("DOMContentLoaded", () =>{
-  console.log("lol")
+  // console.log("lol")
   SongApi.fetchSongs()
     document.querySelector("#search-wrapper > input[type=text]").addEventListener("keyup", Song.searchSongs)
 
@@ -19,6 +19,7 @@ console.log(User)
         User.findOrCreateUser(newUserInput)
         
     })
+    
     // createUserForm.addEventListener("click", User.findOrCreateUser)
 
   PlaylistApi.fetchPlaylists()

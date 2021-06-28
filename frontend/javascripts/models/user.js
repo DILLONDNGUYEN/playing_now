@@ -12,5 +12,6 @@ class User{
   static findByName(username){
     return this.all.find(user=> user.name === username)
   }
+  
 
 }

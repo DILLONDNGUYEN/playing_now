@@ -63,7 +63,7 @@ function nextSong(){
 }
 
 
-//Event Listens
+//Event Listeners
 
 playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
