@@ -28,8 +28,8 @@ class UserApi {
     //This will pass in username that the user creates and then save to the backend with POST request
     static async createUser(username){
         const nameObj = {username}
-        console.log(nameObj)
-        
+        // console.log(nameObj)
+        // debugger
         try {
             let res = await fetch("http://localhost:3000/users", {
                 method: "POST",

@@ -15,12 +15,18 @@ class SongApi {
     })
 
   }
+  // This will fetch songs
   async fetchSongs(){
     try {
-      let res = await fetchSongs()
+      let res = await fetchSongs("http://localhost:3000/songs")
+      let data = await res.json()
+      console.log(data)
+      return data
     } catch (error) {
-      
+      console.log(error.message)
     }
   }
+//This will find or create Songs
+  async 
 
 }

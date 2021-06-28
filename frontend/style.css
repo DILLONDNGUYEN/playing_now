@@ -135,6 +135,11 @@ body{
   border-radius: 20px;
   border: 20px;
 }
+.search-song{
+  display: inline;
+  justify-content: end;
+  align-items: center;
+}
 .song-title{
   border: 1px solid red;
   justify-content: flex-end;
