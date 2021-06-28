@@ -6,7 +6,10 @@ class UserApi {
     //         data.forEach(user => {
     //             // User.findOrCreateUser(user)
     //             // User.playlists
-    //         });
+    //         })
+    //      .catch(err => {
+     //   console.log(err.message)
+    //})
     // })
     // }
 
@@ -23,8 +26,10 @@ class UserApi {
     }
 
     //This will pass in username that the user creates and then save to the backend with POST request
-    async createUser(username){
+    static async createUser(username){
         const nameObj = {username}
+        console.log(nameObj)
+        
         try {
             let res = await fetch("http://localhost:3000/users", {
                 method: "POST",
@@ -33,6 +38,7 @@ class UserApi {
                 },
                 body: JSON.stringify(nameObj)
             })
+            console.log(res)
             let data = await res.json()
             console.log(data)
             return data

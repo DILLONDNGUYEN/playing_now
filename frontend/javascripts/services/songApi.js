@@ -15,4 +15,12 @@ class SongApi {
     })
 
   }
+  async fetchSongs(){
+    try {
+      let res = await fetchSongs()
+    } catch (error) {
+      
+    }
+  }
+
 }
