@@ -13,5 +13,13 @@ class User{
     return this.all.find(user=> user.name === username)
   }
   
+  render(){
+    document.getElementById("username").innerHTML+=`
+    <div id= username-${this.username}>
+        <h4>Welcome ${this.username}</h4>
+    </div>
+    `
+  }
 
+  
 }

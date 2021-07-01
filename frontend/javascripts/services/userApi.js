@@ -42,7 +42,7 @@ class UserApi {
             let data = await res.json()
             console.log(data)
             // return data
-            debugger
+            // debugger
             const newUser = User.findOrCreateUser(data)
             data.playlists.forEach(playlist => {
                 const p = Playlist.findOrCreatePlaylist(playlist)

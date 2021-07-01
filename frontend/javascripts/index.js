@@ -28,6 +28,8 @@ console.log(User)
     })
 
     // createUserForm.addEventListener("click", User.findOrCreateUser)
+
+    
 //handles Playlists
   // PlaylistApi.fetchPlaylists()
 })
