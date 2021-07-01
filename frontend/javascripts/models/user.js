@@ -12,7 +12,7 @@ class User{
   static findByName(username){
     return this.all.find(user=> user.name === username)
   }
-  
+  //welcome User
   render(){
     document.getElementById("username").innerHTML+=`
     <div id= username-${this.username}>
@@ -21,5 +21,7 @@ class User{
     `
   }
 
-  
+  // logout function might make sense but not really required
+
+
 }

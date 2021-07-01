@@ -40,5 +40,7 @@ class Song{
     `  
   } 
 
+  //push(songs) into playlists or use unshift(songs)to put in beginning of playlists or maybe use splice
+
 }
 

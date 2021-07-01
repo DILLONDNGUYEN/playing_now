@@ -20,6 +20,10 @@ class Playlist{
   }
   
 
-  //Need to give the ability to add songs into a playlist
+ //Need to give the ability to add songs into a playlist
+
+ //Needs to be able to take in a song and display the song in such playlist
+
+//might need crud functionality for deleting songs from the playlist
 
 }
