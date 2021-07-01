@@ -20,8 +20,8 @@ console.log(User)
       e.preventDefault()
       
     // let username = userApi.createUser(newUserInput.value)
-     let username = UserApi.createUser(newUserInput.value)
-     console.log(username)
+    UserApi.createUser(newUserInput.value)
+    //  console.log(username)
       //thing.innerHTML = 
       // User.findOrCreateUser(newUserInput)
         

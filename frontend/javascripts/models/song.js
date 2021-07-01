@@ -11,7 +11,7 @@ class Song{
     Song.all.push(this)
   }
   static findOrCreateSong(song){                                                
-    this.findByTitle(song.title)|| new Song(song)
+    return this.findByTitle(song.title)|| new Song(song)
   } 
   static findByTitle(title){
     return this.all.find(song=> song.title === title)
@@ -40,9 +40,24 @@ class Song{
     </div>
     `  
   } 
-  
+
   //give the plus sign the ability to add songs to playlist
-  //push(songs) into playlists or use unshift(songs)to put in beginning of playlists or maybe use splice
+  //push(songs) into playlists or use unshift(songs)to put in beginning of playlists or maybe use splice, or slice or use concat
+
+  // addSongToPlaylist(){
+  //   //SongArray.concat
+  // }
+
+  // const Songs[
+  //   "title 1",
+  //   "title 2",
+  //   "title 3",
+  // ]
+  // const Playlist [
+  //   ...Songs
+  //   "title 4"
+  //   //^^^ the song the user adds to the playlist
+  // ]
 
 }
 

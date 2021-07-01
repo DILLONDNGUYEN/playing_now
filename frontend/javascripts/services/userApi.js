@@ -47,15 +47,17 @@ class UserApi {
             data.playlists.forEach(playlist => {
                 const p = Playlist.findOrCreatePlaylist(playlist)
                 p.owner_id =  newUser.id
+                debugger
                 playlist.songs.forEach(song => {
 
                  const s = Song.findOrCreateSong(song)
-                 s.playlist_ids.push(p.id)
+                 debugger
+                 s.playlistIds.push(p.id)
 
                 })
             })
-
-            //newUser.welcome()   
+            debugger
+            newUser.render()   
             //Put innerHTML for welcome User
             //current
         } catch (error) {

@@ -10,8 +10,8 @@ class Playlist{
   findSongsInPlaylist(){
     return Song.all.filter(song => song.playlistIds.includes(this.id))
   }
-  static findOrCreatePlaylist(){
-    this.findByOwnerId(playlist.id) || new Playlist(playlist)
+  static findOrCreatePlaylist(playlist){
+    return this.findByOwnerId(playlist.id) || new Playlist(playlist)
   }
   static findByOwnerId(id){
     return this.all.find(function(id){
@@ -23,13 +23,13 @@ class Playlist{
 
 //Need to give the ability to add songs into a playlist
 
-// addSongstoPlaylist(){
+// addSongtoPlaylist(){
 
 // }
 
 
  //Needs to be able to take in a song and display the song in such playlist
- 
+
 // deleteSongsfromPlaylist(){
 
 // }

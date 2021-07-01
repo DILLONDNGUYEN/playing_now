@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    @user = User.find_or_create_by(user_params)
     
     # binding.pry
     if @user.save
