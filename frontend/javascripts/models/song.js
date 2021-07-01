@@ -32,6 +32,7 @@ class Song{
     <div id="song-${this.id}">
 
       <h3 class= "song-title"> <a href="#"> ${this.title}</a> </h3>
+
       <button id="plus" >
         <i class="fas fa-plus"></i>
       </button>
@@ -39,7 +40,8 @@ class Song{
     </div>
     `  
   } 
-
+  
+  //give the plus sign the ability to add songs to playlist
   //push(songs) into playlists or use unshift(songs)to put in beginning of playlists or maybe use splice
 
 }

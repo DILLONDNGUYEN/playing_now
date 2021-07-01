@@ -155,7 +155,11 @@ body{
   position: static;
 }
 
-.playlist-container{
+.playlist-list-container{
   padding-left: 55px;
+}
+
+.playlist-list{
+  position: absolute;
 }
 
