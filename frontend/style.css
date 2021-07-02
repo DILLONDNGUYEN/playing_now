@@ -158,10 +158,12 @@ body{
 }
 
 .playlist-list-container{
-  padding-left: 55px;
+  padding-left: 25px;
+  border: red;
 }
 
 .playlist-list{
-  position: absolute;
+  /* position: absolute; */
+  padding-left: 20px;
 }
 
