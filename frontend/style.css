@@ -155,6 +155,11 @@ body{
 .username-container{
   border-radius: 20px;
   position: static;
+  justify-content: center;
+}
+
+.username{
+  position:absolute;
 }
 
 .playlist-list-container{

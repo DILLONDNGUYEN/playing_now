@@ -13,9 +13,9 @@ class Playlist{
   static findOrCreatePlaylist(playlist){
     return this.findByOwnerId(playlist.id) || new Playlist(playlist)
   }
-  static findByOwnerId(owner_id){
-    return this.all.find(function(owner_id){
-      playlist.id=== owner_id   
+  static findByOwnerId(id){
+    return this.all.find(function(playlist){
+      playlist.id=== id   
     })
   }
   render(){
@@ -26,6 +26,7 @@ class Playlist{
     </div>
     `
   }
+
   
 //uses playlist-list-container and playlist-list
 

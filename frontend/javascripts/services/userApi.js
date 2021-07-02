@@ -44,6 +44,7 @@ class UserApi {
             // return data
             // debugger
             const newUser = User.findOrCreateUser(data)
+
             data.playlists.forEach(playlist => {
                 const p = Playlist.findOrCreatePlaylist(playlist)
                 p.owner_id =  newUser.id
@@ -52,7 +53,7 @@ class UserApi {
 
                  const s = Song.findOrCreateSong(song)
                 //  debugger
-                 s.playlistIds.push(p.id)
+                 s.playlistIds.includes(p.id) ? null : s.playlistIds.push(p.id)
 
                 })
             })
