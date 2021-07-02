@@ -25,6 +25,12 @@ class User{
     //user playlist displays here
   }
 
+  // render(){
+  //   document.getElementById("playlist-list").innerHTML =`
+  //   <div
+  //   `
+  // }
+
   // logout function might make sense but not really required
 
 

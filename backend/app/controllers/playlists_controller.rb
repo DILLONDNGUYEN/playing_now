@@ -16,7 +16,7 @@ class PlaylistsController < ApplicationController
   # POST /playlists
   def create
     @playlist = Playlist.new(playlist_params)
-
+    #@playlist = Playlist.find_or_create_by(playlist_params)
     if @playlist.save
       render json: @playlist, status: :created, location: @playlist
     else

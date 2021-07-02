@@ -18,6 +18,14 @@ class Playlist{
       playlist.id=== id   
     })
   }
+  render(){
+    document.getElementById("playlist-list").innerHTML = `
+    <div id= "playlist-${this.name}">
+      <h4>${this.name}</h4>
+
+    </div>
+    `
+  }
   
 //uses playlist-list-container and playlist-list
 

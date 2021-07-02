@@ -139,10 +139,12 @@ body{
   display: inline;
   justify-content: end;
   align-items: center;
+  text-decoration: none;
 }
 .song-title{
   border: 1px solid red;
   justify-content: flex-end;
+  text-decoration: none;
 }
 
 .song-title.plus{
