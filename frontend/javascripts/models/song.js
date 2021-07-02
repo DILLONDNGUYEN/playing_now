@@ -41,6 +41,10 @@ class Song{
     `  
   } 
 
+  // function addSongToPlaylist(s.target.value) {
+  //   document.getElementById("plus").push(${this.title})
+  // }
+
   //give the plus sign the ability to add songs to playlist
   //push(songs) into playlists or use unshift(songs)to put in beginning of playlists or maybe use splice, or slice or use concat
 
