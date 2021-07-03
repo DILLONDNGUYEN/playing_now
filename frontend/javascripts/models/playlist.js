@@ -15,7 +15,7 @@ class Playlist{
   }
   static findByOwnerId(id){
     return this.all.find(function(playlist){
-      playlist.id=== id   
+      playlist.id === id   
     })
   }
   render(){

@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     document.querySelector("#search-wrapper > input[type=text]").addEventListener("keyup", Song.searchSongs)
 
   //Handles Users
-  console.log(User)
+  // console.log(User)
   // UserApi.fetchUsers()
     // document.querySelector("#new-user >input[type=text]").addEventListener("onsubmit", User.findOrCreateUser)
-    
+
     createUserForm.addEventListener("submit", e => {
       e.preventDefault()
       

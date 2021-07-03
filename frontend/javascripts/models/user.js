@@ -2,7 +2,7 @@ class User{
   static all = []
   constructor({username, id}){
     this.username = username
-    this.id =id
+    this.id = id
     User.all.push(this)
   }
   static findOrCreateUser(user){
@@ -13,10 +13,15 @@ class User{
   static findByName(username){
     return this.all.find(user=> user.name === username)
   }
-  findPlaylistsByOwnerId(){
-    return Playlist.all.filter(function(playlist){
-    return playlist.owner_id === this.id   
-    })
+  findPlaylistsByOwnerId(){    
+    if (!this.id) return
+     let p = Playlist.all.filter(playlist => playlist.owner_id === this.id)
+    //  console.table(p)
+    return p
+    // console.log(`${playlist.owner_id}-${this.id}`)
+      
+    //   console.log(this.id)
+    // return playlist.owner_id === this.id          
   }
   //welcome User
 
@@ -28,12 +33,13 @@ class User{
         <ul id="user-playlists"></ul> 
     </div>
     `
+    // console.log(id)
     // debugger
-    this.findPlaylistsByOwnerId().foreach(playlist => {
+    this.findPlaylistsByOwnerId().forEach(playlist => {
       const li = document.createElement("li")
       const a = document.createElement("a")
       a.innerText = playlist.name
-      a.addEventListener("click",playlist.displaySongs)
+      a.addEventListener("click", playlist.displaySongs)
       li.appendChild(a)
       document.getElementById("user-playlists").appendChild(li)
     })

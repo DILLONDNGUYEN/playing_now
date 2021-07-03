@@ -38,9 +38,9 @@ class UserApi {
                 },
                 body: JSON.stringify(nameObj)
             })
-            console.log(res)
+            // console.log(res)
             let data = await res.json()
-            console.log(data)
+            // console.log(data)
             // return data
             // debugger
             const newUser = User.findOrCreateUser(data)
@@ -49,12 +49,12 @@ class UserApi {
                 const p = Playlist.findOrCreatePlaylist(playlist)
                 p.owner_id =  newUser.id
                 playlist.songs.forEach(song => {
-                    debugger
+                    // debugger
 
                  const s = Song.findOrCreateSong(song)
-                //  debugger
                  s.playlistIds.includes(p.id) ? null : s.playlistIds.push(p.id)
-
+                //  debugger   
+                 
                 })
             })
             // debugger
