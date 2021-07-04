@@ -21,7 +21,7 @@ class Playlist{
   render(){
     document.getElementById("playlist-list").innerHTML = `
     <div id= "playlist-${this.name}">
-      <h4>${this.name}</h4>
+      <h3 class="playlist-name"> <a href='#'> ${this.name}</a> </h3>
 
     </div>
     `

@@ -28,7 +28,7 @@ class User{
   render(){
     document.getElementById("username").innerHTML =`
     <div id= "username-${this.username}">
-        <h4>Welcome ${this.username}</h4>
+        <h2>Welcome, ${this.username}</h2>
         <h3> Playlists: </h3>
         <ul id="user-playlists"></ul> 
     </div>

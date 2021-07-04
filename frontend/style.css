@@ -147,7 +147,7 @@ body{
   text-decoration: none;
 }
 
-.song-title.plus{
+.plus{
   border: 1px solid red;
   align-self: flex-end;
 }
