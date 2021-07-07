@@ -24,6 +24,15 @@ class PlaylistsController < ApplicationController
     end
   end
 
+  def show_playlist_songs
+   # binding.pry
+    p = Playlist.find(params[:playlist_id])
+    playlist_songs = p.playlist_songs
+    songs = playlist_songs.map { |song| Song.find(song.song_id)}
+
+    render json: songs
+  end
+
   # PATCH/PUT /playlists/1
   def update
     if @playlist.update(playlist_params)

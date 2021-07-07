@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () =>{
         
     })
 
+    
+
     // createUserForm.addEventListener("click", User.findOrCreateUser)
 
     

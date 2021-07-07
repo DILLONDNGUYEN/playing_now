@@ -14,7 +14,7 @@ class Song{
     return this.findByTitle(song.title)|| new Song(song)
   } 
   static findByTitle(title){
-    return this.all.find(song=> song.title === title)
+    return this.all.find(song => song.title === title)
   }
   static findAllByTitle(title){
         const formattedTitle= title.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1) ).join(" ")
@@ -40,6 +40,18 @@ class Song{
     </div>
     `  
   } 
+  // console.log(title)
+  // displaySongs(title){
+  //   return this.all.find(song => song.title === title)
+  // }
+
+  // addSongToPlaylist(title){
+  //   document.getElementById("plus").innerText.push(${this.title})
+
+
+  // }
+
+
 
   // function addSongToPlaylist(s.target.value) {
   //   document.getElementById("plus").push(${this.title})

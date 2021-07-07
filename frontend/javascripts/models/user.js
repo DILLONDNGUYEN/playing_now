@@ -4,6 +4,7 @@ class User{
     this.username = username
     this.id = id
     User.all.push(this)
+    this.playlistApi = new PlaylistApi
   }
   static findOrCreateUser(user){
     // debugger
@@ -33,19 +34,42 @@ class User{
         <ul id="user-playlists"></ul> 
     </div>
     `
+  
     // console.log(id)
-    // debugger
     this.findPlaylistsByOwnerId().forEach(playlist => {
+      // console.log(playlist)
       const li = document.createElement("li")
       const a = document.createElement("a")
-      a.innerText = playlist.name
-      a.addEventListener("click", playlist.displaySongs)
+      const ul = document.createElement("ul")
+      a.innerText = playlist.name     
+      a.addEventListener("click", e => { 
+        // console.log(e)
+        ul.innerText = ""
+      this.playlistApi.displaySongs(playlist.id)
+      .then(songs => {
+        songs.forEach(s => {
+          console.log(s.title)        
+          ul.innerText = s.title + "," + " " + "by" + " " + s.artists
+          li.appendChild(ul)
+        })
+        
+      })
+      //  console.log(songs)
+      })
       li.appendChild(a)
       document.getElementById("user-playlists").appendChild(li)
+
+      // debugger
     })
 
-    //user playlist displays here
-  }
+    }//user playlist displays here
+  
+  
+
+  // displaySongs(id){
+  //   // console.log(id) 
+  //   fetch
+  // }
 
   // render(){
   //   document.getElementById("playlist-list").innerHTML =`
