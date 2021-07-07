@@ -39,14 +39,12 @@ class Song{
       
     </div>
     `  
+    document.getElementById("plus").addEventListener("click", Playlist.addDisplayPlaylistOnClick) 
   } 
-  // console.log(title)
-  // displaySongs(title){
-  //   return this.all.find(song => song.title === title)
-  // }
 
-  // addSongToPlaylist(title){
-  //   document.getElementById("plus").innerText.push(${this.title})
+  
+
+  // (title){
 
 
   // }

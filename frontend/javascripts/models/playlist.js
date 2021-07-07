@@ -26,6 +26,17 @@ class Playlist{
     </div>
     `
   }
+  static addDisplayPlaylistOnClick(e ){
+    const playlistAnchors = Playlist.all.map(playlist =>{
+      const formatId = `playlist-${playlist.id}`
+      return `<a href="#" id=${formatId}> ${playlist.name} </a>`
+      
+    })
+    const div = document.createElement("div")
+    div.innerHTML= playlistAnchors
+    debugger
+       document.querySelector("#search-wrapper").appendChild(div)
+  }
 
   
 
