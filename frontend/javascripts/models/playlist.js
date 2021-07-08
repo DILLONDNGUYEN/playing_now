@@ -27,25 +27,38 @@ class Playlist{
     </div>
     `
   }
-  static addDisplayPlaylistOnClick(e){
+  static findById(playlist_id){
+    return this.all.find(function(playlist){
+    return playlist.id === playlist_id
+    })
+  }
+
+
+    static addDisplayPlaylistOnClick(e){
+    const div = document.createElement("div")
+    document.querySelector("#search-wrapper").appendChild(div)
     const playlistAnchors = Playlist.all.map(playlist =>{
       const formatId = `playlist-${playlist.id}`
-      return `<a href="#" id=${formatId}> ${playlist.name} </a>`
+      const a = document.createElement("a")
+      debugger
+      a.innerText = playlist.name
+      a.href="#"
+      a.id = formatId
+      div.innerHTML += a
+      a.addEventListener("click", () => playlist.addSongToPlaylist())
       
     })
-    const div = document.createElement("div")
-    div.innerHTML= playlistAnchors
     // debugger
-      document.querySelector("#search-wrapper").appendChild(div)
-      const playlist = Playlist.findById()
-      console.log(Playlist)
-        if (!song.playlist_ids.includes(playlist_id))
-          {song.playlist_ids.push(playlist_id)}
-            div.appendChild(playlist)
+    
+    
+    // debugger
+      
+     
+      
+     
   }
 
   
-
   
 //uses playlist-list-container and playlist-list
 

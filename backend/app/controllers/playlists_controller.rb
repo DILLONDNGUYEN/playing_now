@@ -48,6 +48,14 @@ class PlaylistsController < ApplicationController
     render json: playlist   
   end
 
+  def push_song_to_playlist
+    @playlist = Playlist.find_by(id: params[:playlist_id])
+    @song = Song.find_by(id: params[:song_id])
+    @playlist.songs << @song
+
+    render json: song
+  end
+
   # PATCH/PUT /playlists/1
   def update
     if @playlist.update(playlist_params)

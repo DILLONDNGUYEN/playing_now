@@ -42,6 +42,15 @@ class Song{
     document.getElementById("plus").addEventListener("click", Playlist.addDisplayPlaylistOnClick) 
   } 
   
+  addSongToPlaylist(e){
+        debugger
+            if (!song.playlist_ids.includes(this.id)){
+              song.playlist_ids.push(this.id)
+              
+              //fetch call to the backend to add song to playlist
+            }
+             
+      }
   
   
 
