@@ -6,6 +6,7 @@ class Playlist{
     this.owner_id = owner_id
     this.id = id
     Playlist.all.push(this)
+    this.playlistApi = new PlaylistApi
   }
   findSongsInPlaylist(){
     return Song.all.filter(song => song.playlistIds.includes(this.id))
@@ -37,6 +38,7 @@ class Playlist{
     // debugger
       document.querySelector("#search-wrapper").appendChild(div)
       const playlist = Playlist.findById()
+      console.log(Playlist)
         if (!song.playlist_ids.includes(playlist_id))
           {song.playlist_ids.push(playlist_id)}
             div.appendChild(playlist)
