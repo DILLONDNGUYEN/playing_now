@@ -34,7 +34,7 @@ class PlaylistsController < ApplicationController
   end
 
   def add_song_to_playlist
-    # binding.pry
+      binding.pry
     pid = params[:playlist_id]
     sid = params[:song_id]
 

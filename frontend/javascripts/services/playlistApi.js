@@ -22,14 +22,27 @@ class PlaylistApi{
       })
       let data = await res.json()
       return data
-
-      
-
       // console.log(data)
-      
-
     } catch (error) {
         console.log(error.message)
     }
   }
+
+  async findById(playlist_id, song_id){
+    const playlistSongObj = {playlist_id:playlist_id, song_id: song_id}
+    try {
+      let res = await fetch("http://localhost:3000/songtoplaylist",{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(playlistSongObj)
+      })
+      let data = await res.json()
+      return data
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
 }
