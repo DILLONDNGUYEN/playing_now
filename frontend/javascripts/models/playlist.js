@@ -34,11 +34,11 @@ class Playlist{
     })
     const div = document.createElement("div")
     div.innerHTML= playlistAnchors
-    debugger
+    // debugger
       document.querySelector("#search-wrapper").appendChild(div)
     const playlist = Playlist.findById(playlist_id)
-    if (!song.playlist_ids.includes(playlist_id))
-    {song.playlist_ids.push(playlist_id)}
+      if (!song.playlist_ids.includes(playlist_id))
+      {song.playlist_ids.push(playlist_id)}
   }
 
   
