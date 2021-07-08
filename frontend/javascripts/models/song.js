@@ -41,7 +41,8 @@ class Song{
     `  
     document.getElementById("plus").addEventListener("click", Playlist.addDisplayPlaylistOnClick) 
   } 
-
+  
+  
   
 
   // (title){

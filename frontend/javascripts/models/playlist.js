@@ -26,7 +26,7 @@ class Playlist{
     </div>
     `
   }
-  static addDisplayPlaylistOnClick(e ){
+  static addDisplayPlaylistOnClick(e){
     const playlistAnchors = Playlist.all.map(playlist =>{
       const formatId = `playlist-${playlist.id}`
       return `<a href="#" id=${formatId}> ${playlist.name} </a>`
@@ -35,7 +35,10 @@ class Playlist{
     const div = document.createElement("div")
     div.innerHTML= playlistAnchors
     debugger
-       document.querySelector("#search-wrapper").appendChild(div)
+      document.querySelector("#search-wrapper").appendChild(div)
+    const playlist = Playlist.findById(playlist_id)
+    if (!song.playlist_ids.includes(playlist_id))
+    {song.playlist_ids.push(playlist_id)}
   }
 
   

@@ -33,6 +33,21 @@ class PlaylistsController < ApplicationController
     render json: songs
   end
 
+  def add_song_to_playlist
+    pid = params[:playlist_id]
+    sid = params[:song_id]
+
+    songs_in_playlist = Playlist.find(pid).playlist_songs
+    songs_in_playlist.each{ |s|
+      next if s.song_id() = sid
+
+    Playlistsong.create(playlist:, song:)
+    
+    render json: playlist
+    }
+        
+  end
+
   # PATCH/PUT /playlists/1
   def update
     if @playlist.update(playlist_params)
