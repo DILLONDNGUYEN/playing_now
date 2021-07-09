@@ -7,6 +7,7 @@ class Playlist{
     this.id = id
     Playlist.all.push(this)
     this.playlistApi = new PlaylistApi
+    
   }
   findSongsInPlaylist(){
     return Song.all.filter(song => song.playlistIds.includes(this.id))
@@ -38,14 +39,16 @@ class Playlist{
     const div = document.createElement("div")
     document.querySelector("#search-wrapper").appendChild(div)
     const playlistAnchors = Playlist.all.map(playlist =>{
+      console.log(playlist)
       const formatId = `playlist-${playlist.id}`
       const a = document.createElement("a")
-      debugger
+
+      // debugger
       a.innerText = playlist.name
-      a.href="#"
+      
       a.id = formatId
       div.innerHTML += a
-      a.addEventListener("click", () => playlist.addSongToPlaylist())
+      a.addEventListener("click", () => this.playlistApi.findById(1, 1))
       
     })
     // debugger

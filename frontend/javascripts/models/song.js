@@ -9,6 +9,7 @@ class Song{
     this.id = id
     this.playlistIds = []
     Song.all.push(this)
+    this.playlistApi = new PlaylistApi
   }
   static findOrCreateSong(song){                                                
     return this.findByTitle(song.title)|| new Song(song)
@@ -39,16 +40,26 @@ class Song{
       
     </div>
     `  
-    document.getElementById("plus").addEventListener("click", Playlist.addDisplayPlaylistOnClick) 
+    document.getElementById("plus").addEventListener("click", e => {
+      const ul = document.createElement("ul")
+      ul.innerText = ""
+      let playlistSongs = document.querySelector("")
+      this.playlistApi.findById(1, this.id)
+      
+      .then(data => {
+        console.log(data.songs)
+      
+      })
+
+    }) 
   } 
   
-  addSongToPlaylist(e){
-        debugger
-            if (!song.playlist_ids.includes(this.id)){
-              song.playlist_ids.push(this.id)
-              
               //fetch call to the backend to add song to playlist
-            }
+  // addSongToPlaylist(e){
+  //       // debugger
+
+  //          this.playlistApi.findById(playlistId, songId)
+  //           }
              
       }
   
@@ -82,6 +93,6 @@ class Song{
   //   "title 4"
   //   //^^^ the song the user adds to the playlist
   // ]
+    
 
-}
 

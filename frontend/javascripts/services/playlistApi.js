@@ -39,6 +39,7 @@ class PlaylistApi{
   }
 
   async findById(playlist_id, song_id){
+    // console.log("hair")
     const playlistSongObj = {playlist_id:playlist_id, song_id: song_id}
     try {
       let res = await fetch("http://localhost:3000/songtoplaylist",{

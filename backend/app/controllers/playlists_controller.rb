@@ -34,18 +34,20 @@ class PlaylistsController < ApplicationController
   end
 
   def add_song_to_playlist
-      binding.pry
     pid = params[:playlist_id]
     sid = params[:song_id]
-
-    songs_in_playlist = Playlist.find(pid).playlist_songs
+    playlist = Playlist.find(pid)
+    #  binding.pry
+    songs_in_playlist = playlist.playlist_songs
     songs_in_playlist.each{ |s|
-      next if s.song_id = sid
-
-    Playlistsong.create(:playlist, :song)
+      # binding.pry
+      # next if s.song_id == sid
+      PlaylistSong.find_or_create_by(playlist_id: pid, song_id: sid)
     }
-
-    render json: playlist   
+    
+    #  binding.pry
+    playlist.save
+    render json: playlist  
   end
 
   def push_song_to_playlist
