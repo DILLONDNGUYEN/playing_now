@@ -1,5 +1,5 @@
 # playing_now
-This is a simple Playlist making app.  Users are able to search for a song and said song on to a list as if it were a playlist.
+This is a simple Playlist making app.  Users are able to search for a song and said song on to a list as if it were a playlist. The Music Player feature will work as a placeholder and will be functioning in future updates.
 
 Installation and Running:
 
